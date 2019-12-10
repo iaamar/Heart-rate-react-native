@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700|Material+Icons">
+    {% comment %} <link rel="stylesheet" href="{{ url_for('static', filename='contact.css') }}"> {% endcomment %}
+    <style>
+        .section {
+            text-align: center;
+            font-size: 3em;
+        }
+
+        .aboutPage {
+            text-align: center;
+            font-size: 5em;
+            /* background-image: url('https://images.unsplash.com/photo-1537182534312-f945134cce34?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80'); */
+            /* background-size: cover ; */
+            /* background-image: image('/15.png'); */
+            /* background-repeat: no-repeat; */
+            /* background-size: 100%; */
+            /* background-image: ; */
+        }
+
+        .aboutPageText {
+            text-align: left;
+            color: black;
+            font-family: 'Google Sans';
+            font-size: 60%;
+            padding-left: 35%;
+            padding-bottom: 5%;
+        }
+
+        .aboutPageLayer {
+            padding-top: 20%;
+            align-content: center;
+            height: 100%;
+            width: 100%;
+        }
+        .aboutMe{
+            font-family: 'Google Sans';
+        }
+
+    </style>
+    <title>Mini Project</title>
+    <link rel="stylesheet" type="text/css" href="https://rawgit.com/alvarotrigo/fullPage.js/dev/src/fullpage.css" />
+    <link rel="stylesheet" type="text/css" href="/static/style.css" />
+    <link rel="stylesheet" href="/static/app.js">
+</head>
+
+<body style="background-image: url('https://images.unsplash.com/photo-1537182534312-f945134cce34?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80');
+;background-size: cover ;background-repeat: no-repeat;">
+
+<div id="fullpage">
+      
+    <div class="section aboutPage">
+            
+        <div class="aboutPageLayer">
+            
+            <div class="aboutPageText">
+                    <h2>
+                Heart Rate Monitoring System
+                    </h2>
+                
+                
+                    <div class="aboutMe"></div>
+                    <form  method="POST">
+                        
+                        <!-- <input type="text" name="comment"/> -->
+                        <textarea name="comment" rows="1" cols="15" style= "background-color: transparent" ></textarea>
+                        <br />
+                    
+                    <button class="btn btn-success" type="button" name="button" value="predict" onclick="location.href='predict'">
+                        Predict
+                    </button>
+                    
+                    </form>
+                        <!-- <br>
+                        <br>
+                        <br>
+ -->
+                    </div>
+
+            </div>
+   
+        </div>
+
+    </div>
+
+</div>
+ 
+</body>
+
+</html>

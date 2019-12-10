@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700|Material+Icons">
+    <link rel="stylesheet" href="{{ url_for('static', filename='contact.css') }}">
+    <style>
+        .section {
+            text-align: center;
+            font-size: 3em;
+        }
+    
+        .aboutPage {
+            text-align: center;
+            font-size: 5em;
+            background-image: url('15.png');
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+    
+        .aboutPageText {
+            text-align: left;
+            color: black;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 0%;
+            padding-left: 27%;
+            
+        }
+    
+        .aboutPageLayer {
+            padding-top: 20%;
+            align-content: center;
+            height: 100%;
+            width: 100%;
+        }
+        .result{
+            font-family: 'Google Sans';
+            font-size: 0%;
+        }
+    </style>
+    <title>Results</title>
+    <!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}"> -->
+</head>
+
+<body style="background-image: url('https://images.unsplash.com/photo-1537182534312-f945134cce34?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80');
+;background-size: cover ;background-repeat: no-repeat;">
+<div id="fullpage">
+
+    <div class="section aboutPage">
+        <br>
+<h2>
+    Heart Rate Monitoring System Predictions
+</h2><br>
+<div class="aboutPageText">
+    <p>Data :"{{ comment }}" </p>
+    <div class="results">
+
+        {% if prediction == 1%}
+        <h4 style="color:green;">Normal !! </h4>
+        {% elif prediction == 0%}
+        <h4 style="color:green;">Symptoms of Tachycardia !!!<br>Tachycardia is a common type of heart rhythm disorder <br>in
+            which the
+            heart beats are faster than normal or even symptoms of stress .</h4>
+        {% endif %}
+
+
+    </div>
+</div>
+    <div class="aboutPageLayer"></div>
+    
+    </div>
+    
+    </div>
+
+</body>
+
+</html>
