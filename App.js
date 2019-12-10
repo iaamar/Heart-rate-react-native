@@ -3,14 +3,15 @@ import {
   StyleSheet,
   Text,
   View,
-  Image
+  Image, Button,TouchableOpacity
 } from 'react-native';
 
 export default function App (){
   return (
     <View>
+{/* 
     <View>
-    <Image source = {require("./assets/medicine.png")}style={styles.image}/>
+    <Image source = {require("./assets/images/medicine.png")}style={styles.image}/>
     </View>   
      
      
@@ -19,41 +20,43 @@ export default function App (){
      Heart Rate
     </Text> 
     </View >  
-      
+       */}
+      <View >
+        <TouchableOpacity style={
+          styles.btn
+        }>
+          <Image source={require("./assets/images/medicine.png")} style={styles.image}></Image>
+          <Text style={styles.text}>Click Here To Check Pulse</Text>
+        </TouchableOpacity>
+      </View>
 
     </View>
   );
   }
 
 const styles = StyleSheet.create({
-  // container: {
-  //   flex: 1,
-  //   backgroundColor: '#fff',
-  //   alignItems: 'center',
-  //   justifyContent: 'center',
-  // },
-  
-    // welcomeContainer: {
-    //   marginTop: 20,
-    //   marginLeft: 30,
-    //   marginRight: 30,
-    //   marginBottom: 20
-    // },
     image: {
       width: 300,
       height: 100,
-      resizeMode: "contain",
-      marginTop: 50,
-      marginLeft: 40,
+      resizeMode: "contain"
     },
     
     text: {
-      alignContent: 'center',
-      justifyContent:"center",
-      fontSize: 24,
+      fontSize: 18,
       color: "#6c63ff",
-      fontFamily: "",
       fontWeight: "bold",
-      marginLeft: 150
+      // marginLeft: 45,
+      // marginRight:50,
+      textAlign:"center"
+    },
+    btn: {
+      marginRight: 50,
+      justifyContent:"flex-start",
+      resizeMode: "contain",
+      height: 120,
+      width: 300,
+      marginTop: 100,
+      marginLeft: 45,
+      
     }
 });
